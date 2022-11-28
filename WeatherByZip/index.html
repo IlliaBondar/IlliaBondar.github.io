@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        Author: Illia Bondar
+        Date: 5/16/2021
+        Get Weather by Zipcode
+     -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- JS -->
+    <script src="app.js" defer></script>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- main container -->
+    <div class="container">
+        <h1>Current Weather by ZIP code</h1>
+        <p>To get current weather information, please enter in a ZIP code of the area, choose temperature type you prefer (C/F) and click "Get Weather!" button. if you are not seeing an error, but still not getting weather, please make sure the ZIP code you are trying to enter is an existing one <a href="https://tools.usps.com/zip-code-lookup.htm" target="_blank">here</a></p>
+
+        <!-- zipcode textfield and buttons -->
+        <div class="dataIn">           
+            <form method="GET">
+                <div>
+                    <input id="zipID" type="text" name="zipCode" placeholder="5 Digit ZIP Code here">
+                    <select name="CelsiusFahrenheit" id="dropDownCF">
+                        <option value="imperial" id="fahrenheit">F°</option>
+                        <option value="metric" id="celsius">C°</option>                      
+                    </select>
+                   <p id="errorMsg"></p>
+
+                </div>
+                <div>
+                    <button id="getWeatherBtn" class="btn btn-info" type="button">Get Weather!</button>
+                    <button id="resetBtn" class="btn btn-secondary" type="reset">Reset</button> 
+                </div>                             
+            </form>
+        </div>
+
+        <!-- output container -->
+        <div class="weatherContainer">           
+            <p id="temperature"></p>          
+            <p id="cityName"></p>
+            <p id="placeholder">Your weather will be here!</p>
+            <div id="conditions">
+                <p id="currConditions"></p>
+                <img id="conditionsIcon" src="" alt=""> 
+            </div>
+        </div>
+
+        
+        <footer>
+            <p>2021 ©</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

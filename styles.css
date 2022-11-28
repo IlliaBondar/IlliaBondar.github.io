@@ -1,0 +1,20 @@
+body {background-image: url(resources/background.jpg);
+      background-size: cover;}
+
+.center {
+    position: absolute;
+    padding: 2rem;
+    top: 40%;
+    left: 50%;
+    width: 60%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 70%);
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,95 @@
+/* Illia Bondar
+    5/10/2021
+    Vue an Axios Movie
+    CIS-131 */
+
+body {
+    background-color:white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+
+.aboutBody {
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2) ), url("background.png");
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+footer {
+    text-align: center;
+    text-shadow: 1px 1px 8px grey;
+    bottom: 0;
+}
+
+
+/* movies grid */
+.moviesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5%;
+}
+
+.movie {
+    text-align: center;
+}
+
+.poster {
+    width: 60%;
+    box-shadow: 15px 15px 30px black;
+}
+
+.title {
+    margin-top: 5%;  
+}
+
+.overview  {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+/* About */
+.aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.aboutText {
+    text-align: center;
+    margin-bottom: 30%;
+}
+
+/* Navbar */
+.nav-link {
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.nav-link:hover {
+    color: rgb(19, 233, 222);
+}
+
+.active {
+    color: white;
+    background-color: lightseagreen;
+    border-radius: 4px;
+}
+
+.nav {
+    background-color: rgb(234, 235, 236);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+
+
